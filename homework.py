@@ -3,7 +3,7 @@
 def isint(n):
     return int(n) == float(n)
 
-# Fibonacci
+# Fibonacci 1
 def Fibi(n):
     if isint(n) and n>0:
         a = []
@@ -16,6 +16,24 @@ def Fibi(n):
                 c = a[i-1] + a[i-2]
                 a.append(c)
         return a[n-1]
+    else:
+        print("ay-ay-ay, n must be natural")
+
+# Fibonacci 2
+def Fibi_2(n):
+    if isint(n) and n>0:
+        for i in range(n):
+            if i == 0:
+                F_pr2 = 0
+                F = 0
+            elif i == 1:
+                F_pr = 1
+                F = 1
+            else:
+                F = F_pr2 + F_pr
+                F_pr2 = F_pr
+                F_pr = F
+        return F
     else:
         print("ay-ay-ay, n must be natural")
 
